@@ -1,6 +1,6 @@
 {
   "name": "@jomari-wp/linkedin-jobs-scraper",
-  "version": "13.0.1",
+  "version": "1.0.0",
   "description": "Scrape public available jobs on Linkedin using headless browser",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -21,7 +21,7 @@
     "url": "https://github.com//jiringan-wp/linkedin-jobs-scraper.git/issues"
   },
   "homepage": "https://github.com//jiringan-wp/linkedin-jobs-scraper.git#readme",
-  "author": "Ludovico Fabbri",
+  "author": "Jomari WP",
   "license": "MIT",
   "dependencies": {
     "debug": "^4.3.4",
