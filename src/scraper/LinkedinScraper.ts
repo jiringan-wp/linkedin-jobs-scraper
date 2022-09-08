@@ -41,6 +41,7 @@ class LinkedinScraper extends Scraper {
         }
         else {
             this._runStrategy = new AnonymousStrategy(this);
+            logger.info('ANON BROWSING TRIGGER');
             logger.info(`Using ${AnonymousStrategy.name}`)
         }
     }
