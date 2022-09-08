@@ -312,7 +312,7 @@ export class AuthenticatedStrategy extends RunStrategy {
         logger.info("Setting authentication cookie");
         await page.setCookie({
             name: "li_at",
-            value: config.LI_AT_COOKIE!,
+            value: this.session || config.LI_AT_COOKIE!,
             domain: ".www.linkedin.com"
         });
 

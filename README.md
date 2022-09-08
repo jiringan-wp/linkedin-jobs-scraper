@@ -1,18 +1,8 @@
 # linkedin-jobs-scraper
 > Scrape public available jobs on Linkedin using headless browser. 
-> For each job, the following fields are extracted: `jobId`, 
-> `title`, 
-> `company`,
-> `[companyLink]`,
-> `[companyImgLink]`,
-> `place`, 
-> `date`, 
-> `link`, 
-> `[applyLink]`,
-> `description`, 
-> `descriptionHTML`,
-> `insights`. <br><br>
-> It's also available an equivalent [package in python](https://github.com/spinlud/py-linkedin-jobs-scraper).
+> This is a fork repository to allow session parameter instead of using process environment configuration.
+> Kindly support
+>[Original repository](https://www.npmjs.com/package/linkedin-jobs-scraper) instead of this repo.
 
 ## Table of Contents
 
