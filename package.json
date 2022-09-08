@@ -1,5 +1,5 @@
 {
-  "name": "linkedin-jobs-scraper",
+  "name": "@jomari-wp/linkedin-jobs-scraper",
   "version": "13.0.1",
   "description": "Scrape public available jobs on Linkedin using headless browser",
   "main": "build/index.js",
