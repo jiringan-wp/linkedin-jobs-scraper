@@ -9,14 +9,16 @@ export type ScraperOptions = LaunchOptions & BrowserLaunchArgumentOptions & Brow
 
 export abstract class Scraper extends (EventEmitter as new () => TypedEmitter<IEventListeners>) {
     public options: ScraperOptions;
+    public session: string | undefined;
 
     /**
      * @constructor
      * @param {LaunchOptions} options
      */
-    protected constructor(options: ScraperOptions) {
+    protected constructor(options: ScraperOptions, session?: string) {
         super();
         this.options = options;
+        this.session = session;
     }
 
     /**

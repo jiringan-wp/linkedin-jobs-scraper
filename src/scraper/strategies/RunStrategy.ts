@@ -8,9 +8,11 @@ export interface IRunStrategyResult {
 
 export abstract class RunStrategy {
     protected scraper: Scraper;
+    public session?: string;
 
-    constructor(scraper: Scraper) {
+    constructor(scraper: Scraper, session?: string) {
         this.scraper = scraper;
+        this.session = session;
     }
 
     abstract run(

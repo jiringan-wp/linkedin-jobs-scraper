@@ -32,16 +32,19 @@ class LinkedinScraper extends Scraper {
      * @constructor
      * @param {ScraperOptions} options
      */
-    constructor(options: ScraperOptions) {
-        super(options);
+    constructor(options: ScraperOptions, session?: string) {
+        super(options, session);
 
-        if (config.LI_AT_COOKIE) {
-            this._runStrategy = new AuthenticatedStrategy(this);
-            logger.info(`Env variable LI_AT_COOKIE detected. Using ${AuthenticatedStrategy.name}`)
+        if (config.LI_AT_COOKIE || session) {
+            this._runStrategy = new AuthenticatedStrategy(this, session);
+            if(session){
+                logger.info(`Session initialize LI_AT_COOKIE detected. Using ${AuthenticatedStrategy.name}`)
+            }else{
+                logger.info(`Env variable LI_AT_COOKIE detected. Using ${AuthenticatedStrategy.name}`)
+            }
         }
         else {
             this._runStrategy = new AnonymousStrategy(this);
-            logger.info('ANON BROWSING TRIGGER');
             logger.info(`Using ${AnonymousStrategy.name}`)
         }
     }
